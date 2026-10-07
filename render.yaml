@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nitya-career
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: BASE_URL
+        value: https://nitya-career.onrender.com
+      - key: LINKEDIN_URL
+        value: https://www.linkedin.com/in/nitya-dhagat
+      - key: GITHUB_URL
+        value: https://github.com/Nitya-Dhagat/

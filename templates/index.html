@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitya Dhagat — ML Researcher · Data Science · Software</title>
+<meta name="description" content="IEEE SCEECS 2026 Best Paper Award. MS Data Science at UC San Diego. Former researcher at ISRO SAC.">
+<meta name="theme-color" content="#FAF3E0">
+<style>
+:root{--bg:#FAF3E0;--fg:#5B1A1F;--mute:#8A5A5E;--line:#E3D3B8;--card:#F5EAD0;--accent:#7A1F2B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.sans{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:56px 20px 80px}
+section{margin-top:64px;animation:fade .6s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1{font-size:clamp(2.3rem,9vw,3.5rem);letter-spacing:-.02em;margin:0 0 8px;line-height:1.05}
+h2{font-family:-apple-system,"Segoe UI",sans-serif;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:700;margin:0 0 18px}
+.tag{color:var(--mute);margin:0}
+.lead{font-size:1.2rem;margin:22px 0 26px;max-width:32em}
+.award{display:inline-block;margin:0 0 20px;padding:6px 12px;border:1px solid var(--accent);border-radius:999px;font-family:-apple-system,"Segoe UI",sans-serif;font-size:.8rem;font-weight:600;color:var(--accent)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 18px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-family:-apple-system,"Segoe UI",sans-serif;font-size:.92rem;font-weight:600}
+.btn.primary{background:var(--accent);color:var(--bg)}
+.card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.card small{font-family:-apple-system,"Segoe UI",sans-serif;color:var(--mute);font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;font-weight:600}
+.card h3{margin:6px 0 6px;font-size:1.12rem;line-height:1.3}
+.card p{margin:0;color:var(--mute);font-size:.97rem}
+.card .badge{display:block;margin-top:10px;font-family:-apple-system,"Segoe UI",sans-serif;font-size:.85rem;font-weight:700;color:var(--accent)}
+.card a.more{display:inline-block;margin-top:10px;font-family:-apple-system,"Segoe UI",sans-serif;font-size:.85rem;font-weight:600;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.stat{border-top:2px solid var(--accent);padding-top:12px}
+.stat b{display:block;font-size:1.6rem;letter-spacing:-.01em}
+.stat span{color:var(--mute);font-size:.9rem}
+.proof{border-top:1px solid var(--line);padding-top:12px}
+.proof b{display:block}.proof span{color:var(--mute);font-size:.92rem}
+.bring h3{margin:0 0 4px;font-size:1.02rem}.bring p{margin:0 0 18px;color:var(--mute)}
+.skills p{margin:0 0 8px;color:var(--mute);font-size:.95rem}.skills b{color:var(--fg)}
+footer{margin-top:72px;color:var(--mute);font-size:.8rem;font-family:-apple-system,"Segoe UI",sans-serif}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="award">Best Paper Award · IEEE SCEECS 2026</span>
+    <h1>Nitya Dhagat</h1>
+    <p class="tag">ML Research · Data Science · Software Engineering</p>
+    <p class="tag">MS Data Science @ UC San Diego · Ex-ISRO (SAC)</p>
+    <p class="lead">I build machine learning systems for real-world, large-scale scientific data: satellite remote sensing, NLP, and LLM-powered applications.</p>
+    <div class="btns">
+      <a class="btn primary" href="/go/resume?c={{ campaign }}">View Resume</a>
+      <a class="btn" href="/go/linkedin?c={{ campaign }}">LinkedIn</a>
+      <a class="btn" href="/go/github?c={{ campaign }}">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Results</h2>
+    <div class="grid">
+      <div class="stat"><b>41.2%</b><span>SMAP salinity RMSE reduction (0.929 → 0.547 PSU)</span></div>
+      <div class="stat"><b>1 TB+</b><span>satellite + Argo + river data pipeline</span></div>
+      <div class="stat"><b>2 preprints</b><span>plus a Best Paper Award</span></div>
+      <div class="stat"><b>60%</b><span>lower A100 inference latency on HiDeNET</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Work</h2>
+    <div class="card"><small>ISRO · Space Applications Centre</small>
+      <h3>River-Aware Correction of SMAP Sea Surface Salinity</h3>
+      <p>XGBoost with a novel river-discharge feature set and SHAP analysis for the Bay of Bengal. 47.1% RMSE reduction in the coastal shelf zone. Manuscript in preparation.</p>
+      <span class="badge">Research · Dec 2025 – May 2026</span></div>
+    <div class="card"><small>Remote sensing · Preprint</small>
+      <h3>Cross-Country Generalization of Flood Mapping</h3>
+      <p>Showed random-split evaluation overstates real-world performance: IoU fell 36.2% under country-level splits on Sen1Floods11 (Sentinel-1 SAR + Sentinel-2).</p>
+      <a class="more" href="/go/flood?c={{ campaign }}">Read the preprint →</a></div>
+    <div class="card"><small>NLP · IEEE SCEECS 2026</small>
+      <h3>HiDeNET: Multilevel Sentiment Classification</h3>
+      <p>DeBERTa-v3 + 1D CNN hybrid for cryptocurrency comments; 17% over the SVM baseline.</p>
+      <span class="badge">Best Paper Award, CSE Track</span>
+      <a class="more" href="/go/hidenet?c={{ campaign }}">Read the paper →</a></div>
+    <div class="card"><small>LLM systems · arXiv</small>
+      <h3>Telephony Voice Agent for Banking</h3>
+      <p>Dialogflow CX + Twilio on Google Cloud Run; 95% accuracy on interruptions and context shifts, 99.9% uptime.</p>
+      <a class="more" href="/go/voice?c={{ campaign }}">Read on arXiv →</a></div>
+  </section>
+
+  <section class="bring">
+    <h2>What I bring</h2>
+    <h3>Research</h3><p>Published and awarded work, from rigorous evaluation design to full benchmarks, on large scientific datasets.</p>
+    <h3>Engineering</h3><p>Models taken beyond notebooks: cloud deployment, inference optimization, full-stack and IoT systems.</p>
+    <h3>Curiosity</h3><p>Satellite data, NLP, voice agents, and embedded systems, all treated as problems worth solving properly.</p>
+  </section>
+
+  <section>
+    <h2>Proof</h2>
+    <div class="grid">
+      <div class="proof"><b>UC San Diego</b><span>MS Data Science, enrolled full-time (2028)</span></div>
+      <div class="proof"><b>ISRO · SAC</b><span>Physical Oceanography Division</span></div>
+      <div class="proof"><b>IEEE SCEECS 2026</b><span>Best Paper, 900+ submissions</span></div>
+      <div class="proof"><b>DDU, B.Tech IT</b><span>GPA 9.35/10 · Top 3 in department</span></div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Toolkit</h2>
+    <p><b>ML:</b> PyTorch, TensorFlow, Hugging Face, LightGBM, XGBoost, SHAP, ONNX Runtime</p>
+    <p><b>Data:</b> Python, SQL, Pandas, NumPy, NetCDF/HDF5, Sentinel-1/2, SMAP</p>
+    <p><b>Systems:</b> GCP Cloud Run, AWS, Docker, Kubernetes, Flask, React, Spring Boot</p>
+  </section>
+
+  <section>
+    <h2>Want the detailed version?</h2>
+    <div class="btns">
+      <a class="btn primary" href="/go/resume?c={{ campaign }}">Download Resume</a>
+      <a class="btn" href="/go/scholar?c={{ campaign }}">Google Scholar</a>
+      <a class="btn" href="/go/site?c={{ campaign }}">Full Portfolio</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Let's connect</h2>
+    <p style="margin-top:0">Open to ML research, data science, and software engineering roles and collaborations.</p>
+    <div class="btns">
+      <a class="btn" href="/go/linkedin?c={{ campaign }}">LinkedIn</a>
+      <a class="btn" href="/go/github?c={{ campaign }}">GitHub</a>
+      <a class="btn" href="mailto:{{ p.email }}"
+         onclick="fetch('/go/email?c={{ campaign }}',{redirect:'manual',keepalive:true})">{{ p.email }}</a>
+    </div>
+  </section>
+
+  <footer>© Nitya Dhagat · Irvine, CA</footer>
+</main>
+</body>
+</html>

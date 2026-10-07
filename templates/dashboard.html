@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Scan dashboard</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",sans-serif;max-width:860px;margin:30px auto;padding:0 16px;color:#111}
+.stats{display:flex;gap:12px;flex-wrap:wrap}.s{flex:1;min-width:140px;border:1px solid #e5e5e5;border-radius:12px;padding:16px}
+.s b{font-size:2rem;display:block}.s span{color:#777;font-size:.85rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:24px}
+table{width:100%;border-collapse:collapse;font-size:.9rem}td,th{text-align:left;padding:6px 4px;border-bottom:1px solid #eee}
+h3{margin:0 0 8px;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#777}
+</style></head><body>
+<h2>Career Fair Performance</h2>
+<div class="stats">
+  <div class="s"><b>{{ total }}</b><span>total scans</span></div>
+  <div class="s"><b>{{ unique }}</b><span>unique visitors</span></div>
+  <div class="s"><b>{{ returning }}</b><span>return visits</span></div>
+  <div class="s"><b>{{ clicks|sum(attribute='n') if clicks else 0 }}</b><span>link clicks</span></div>
+</div>
+<div class="cols">
+  <div><h3>By campaign</h3><table>{% for r in by_campaign %}<tr><td>{{ r.campaign }}</td><td>{{ r.n }}</td></tr>{% endfor %}</table></div>
+  <div><h3>Device</h3><table>{% for r in by_device %}<tr><td>{{ r.device }}</td><td>{{ r.n }}</td></tr>{% endfor %}</table></div>
+  <div><h3>Country</h3><table>{% for r in by_country %}<tr><td>{{ r.country }}</td><td>{{ r.n }}</td></tr>{% endfor %}</table></div>
+  <div><h3>Link clicks</h3><table>{% for r in clicks %}<tr><td>{{ r.target }}</td><td>{{ r.n }}</td></tr>{% endfor %}</table></div>
+  <div><h3>Peak hours (UTC)</h3><table>{% for r in by_hour %}<tr><td>{{ r.h }}</td><td>{{ r.n }}</td></tr>{% endfor %}</table></div>
+</div>
+<h3 style="margin-top:28px">Recent scans</h3>
+<table><tr><th>Time (UTC)</th><th>Campaign</th><th>Device</th><th>Country</th><th>Referrer</th></tr>
+{% for r in recent %}<tr><td>{{ r.ts[:19] }}</td><td>{{ r.campaign }}</td><td>{{ r.device }}</td><td>{{ r.country }}</td><td>{{ r.referrer[:30] }}</td></tr>{% endfor %}</table>
+</body></html>
